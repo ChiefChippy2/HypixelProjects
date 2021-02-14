@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
 env:
-  KEY: ${{ secrets.GITHUB_API_KEY }}
+  KEY: ${{ secrets.API_KEY }}
 
 jobs:
   build:
