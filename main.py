@@ -2,7 +2,7 @@ from Projects.hyp_parse_everything import *
 import json
 from sys import argv
 # Get API key from API_KEY.json or argv
-try: API_KEY = argv[2]
+try: API_KEY = argv[1]
 except: 
     API_FILE = open("API_KEY.json", "r")
     API_KEY = json.loads(API_FILE.read())["API_KEY"]
