@@ -3,8 +3,6 @@ name: Test Code
 on:
   pull_request:
   push:
-env:
-  KEY: ${{ secrets.API_KEY }}
 
 jobs:
   build:
@@ -17,3 +15,5 @@ jobs:
       - run:
           pip install -r Projects/requirements.txt &&
           python main.py
+        env:
+          KEY: ${{ secrets.API_KEY }}
