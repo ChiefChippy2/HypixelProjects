@@ -1,12 +1,11 @@
 from Projects.hyp_parse_everything import *
 import json
-from sys import argv
+import os
 # Get API key from API_KEY.json or argv
-try: API_KEY = argv[1]
-except: 
+API_KEY = os.environ.get('key')
+if not API_KEY:
     API_FILE = open("API_KEY.json", "r")
     API_KEY = json.loads(API_FILE.read())["API_KEY"]
-print(argv[1])
 # Players for testing
 known_players = {
     "Global":
